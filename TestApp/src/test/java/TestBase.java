@@ -16,7 +16,7 @@ public abstract class TestBase {
     @BeforeTest
     public void beforeOperations() {
         System.out.println(System.getProperty("user.dir"));
-        System.setProperty("webdriver.chrome.driver", "/home/drew/IdeaProjects/TestApp/src/main/resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
         driver = new ChromeDriver();
     }
 
