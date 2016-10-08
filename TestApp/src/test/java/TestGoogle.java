@@ -17,7 +17,10 @@ public class TestGoogle extends TestBase {
         WebElement searchButton = driver.findElement(By.className("sbico"));
         searchButton.click();
         try {
-            driver.wait(5);
+            synchronized(this) {
+                driver.wait(5);
+            }
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
