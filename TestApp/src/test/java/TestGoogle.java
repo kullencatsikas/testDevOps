@@ -13,9 +13,14 @@ public class TestGoogle extends TestBase {
 
         driver.get("http://www.google.com");
         WebElement searchBar  = driver.findElement(By.id("lst-ib"));
-        searchBar.sendKeys("test");
+        searchBar.sendKeys("boyhood");
         WebElement searchButton = driver.findElement(By.className("sbico"));
         searchButton.click();
+        try {
+            driver.wait(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 }
