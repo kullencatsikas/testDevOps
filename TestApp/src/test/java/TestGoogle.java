@@ -10,18 +10,16 @@ public class TestGoogle extends TestBase {
 
     @Test
 
-    public synchronized void goToGoogle() {
+    public  void goToGoogle() {
 
         driver.get("http://www.google.com");
         WebElement searchBar  = driver.findElement(By.id("lst-ib"));
         searchBar.sendKeys("boyhood");
         WebElement searchButton = driver.findElement(By.className("sbico"));
         searchButton.click();
+
         try {
-
-                driver.wait(5);
-
-
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
