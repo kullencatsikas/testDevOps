@@ -9,7 +9,8 @@ import org.testng.annotations.Test;
 public class TestGoogle extends TestBase {
 
     @Test
-    public void goToGoogle() {
+
+    public synchronized void goToGoogle() {
 
         driver.get("http://www.google.com");
         WebElement searchBar  = driver.findElement(By.id("lst-ib"));
@@ -17,9 +18,9 @@ public class TestGoogle extends TestBase {
         WebElement searchButton = driver.findElement(By.className("sbico"));
         searchButton.click();
         try {
-            synchronized(this) {
+
                 driver.wait(5);
-            }
+
 
         } catch (InterruptedException e) {
             e.printStackTrace();
