@@ -12,11 +12,12 @@ public class TestGoogle extends TestBase {
 
     public  void goToGoogle() {
 
-        driver.get("http://www.google.com");
-        WebElement searchBar  = driver.findElement(By.id("lst-ib"));
-        searchBar.sendKeys("boyhood");
-        WebElement searchButton = driver.findElement(By.className("sbico"));
-        searchButton.click();
+        driver.get("https://www.thepiratebay.org/torrent/11329987/Boyhood_(2014)_720p_BrRip_x264_-_YIFY");
+
+        WebElement searchBar  = driver.findElement(By.xpath(".//a[@title='Get this torrent']"));
+        //searchBar.sendKeys("boyhood");
+       // WebElement searchButton = driver.findElement(By.className("sbico"));
+        searchBar.click();
 
         try {
             Thread.sleep(5000);
